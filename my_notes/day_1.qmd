@@ -1,2 +1,16 @@
-## Intro to Probabilistic Models
+---
+title: Day 1
+subtitle: ProbAI 2022
+jupyter: julia-1.7
+---
+
+## Probabilistic programming
+
+- From MCMC-based probabilistic programming languages (PPL) to variational inference
+
+```{julia}
+using Turing
+```
+
+
 
