@@ -7,10 +7,9 @@ jupyter: julia-1.7
 ## Probabilistic programming
 
 - From MCMC-based probabilistic programming languages (PPL) to variational inference
+- See [notebook](../2022-ProbAI/Day1/notebooks/students_PPLs_Intro.ipynb)
 
-```{julia}
-using Turing
-```
+## Bayesian Workflow
 
 
 
