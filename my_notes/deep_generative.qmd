@@ -1,0 +1,45 @@
+---
+title: Deep Generative Models
+subtitle: ProbAI 2022
+jupyter: julia-1.7
+---
+
+## VAE
+
+### Example: Mixture of $k$ Gaussians
+
+Recall: 
+
+- $KL(q||p)$: zero avoiding (overly confident, avoiding high variance)
+- $KL(p||q)$: zero forcing (overly conservative, embracing high variance)
+
+### Setup
+
+- Assume joint distribution over $x$ (input) and $z$ (latent): $p_{\theta}(x,z)$
+- Amortized VI: instead of optimizing for each $x_i$ separately $q(z_i|x_i) ~ N(0,1)$ we optimize for the entire sample $x~N(0,I)$
+- Reparameterization: we cannot sample (MC) and then differentiate. Need to move gradient operation inside the expectation, because our estimate is only unbiased in expectation.
+
+### Normalizing flows
+
+Goal: get a more flexible variational posterior; that is avoid being overly confident $KL(q||p)$ and overly conservative $KL(p||q)$) and also avoid mean field assumption
+
+Idea 💡: apply sequence of invertible transformation $f_k:R^D\mapsto R^D$ where $D$ is the same dimensions as $x$, i.e. there is no compression at all. 
+
+$$z_K=f_K \odot ... \odot f_1(z_0) \ ,\ \ \ z \sim N(0,I)$$
+
+This way we can end up with fairly complex distributions.
+
+Problem : need to find invertable function. 
+
+Solution: use planar flows (basically neural network with one hidden layer with single neuron).
+
+[CE Paper](https://openreview.net/forum?id=ZBR9EpEl6G4) (2021)
+
+### Denoising diffusion models
+
+Forward pass: take $x_0$ and add a tiny bit of noise to it. Repeat this until you end up in a stationary distribution. ($q(x_t,x_{t-1})$)
+Backward pass (generative model): train a probabilistic model that matches reverse denoising step. 
+
+- Can choose a $q(\cdot)$ for which we have a closed-form solution for posterior.
+
+[CE Paper](https://arxiv.org/abs/2203.15636) (2022)
