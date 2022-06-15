@@ -1,5 +1,5 @@
 ---
-title: Day 1
+title: Intro
 subtitle: ProbAI 2022
 jupyter: julia-1.7
 ---
@@ -8,8 +8,6 @@ jupyter: julia-1.7
 
 - From MCMC-based probabilistic programming languages (PPL) to variational inference
 - See [notebook](../2022-ProbAI/Day1/notebooks/students_PPLs_Intro.ipynb)
-
-## Bayesian Workflow
 
 
 

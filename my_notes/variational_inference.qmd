@@ -1,0 +1,16 @@
+---
+title: Variational Inference and Optimization
+subtitle: ProbAI 2022
+jupyter: julia-1.7
+---
+
+## Coordinate Ascent VB
+
+- Optimization is done separately by dimension.
+    - Have not seen this in practice?
+    - In practice: autodiff.
+
+## BNN
+
+- Deep ensemble: train K times
+- Variational inference: simple sample from variational posterior
