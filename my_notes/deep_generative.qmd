@@ -43,3 +43,6 @@ Backward pass (generative model): train a probabilistic model that matches rever
 - Can choose a $q(\cdot)$ for which we have a closed-form solution for posterior.
 
 [CE Paper](https://arxiv.org/abs/2203.15636) (2022)
+
+## Normalizing Flows (Didrik Nielsen)
+
