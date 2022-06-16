@@ -1,0 +1,32 @@
+---
+title: Gaussian Processes
+subtitle: ProbAI 2022
+jupyter: julia-1.7
+---
+
+## Intro
+
+- A Gaussian Process is a collection of random variables over a space such that any finite subset is also Gaussian.
+
+$$
+f(\mathbf{x}) \sim \mathcal{GP}(\mu(\mathbf{x}),\kappa (\mathbf{x},\mathbf{x}'))
+$$
+
+- GPs are **non-parametric**
+
+## Use cases
+
+- The kernel representation (covariance function) encodes prior beliefs in the data-generating latent functions. 
+- Covariance functions typically involve parameters that are learned from the data.
+
+## Setup
+
+$$
+f(t) \sim \mathcal{GP}(..) \ \ \ \text{prior} 
+\mathbf{y}|\mathbf{f} \sim \prod_i p(y_i|f(x_i)) \ \ \ \text{likelihood}
+$$
+
+## Problems
+
+- Does not scale well to large data sets beyond $n>10000$.
+- Time series works really well ($\mathcal{GP}-VAR$)?
