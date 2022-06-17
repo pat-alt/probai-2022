@@ -1,0 +1,13 @@
+---
+title: Human-Centered AI
+subtitle: ProbAI 2022
+---
+
+## Model Calibration
+
+> The problem of predicting probability estimates representative of the true likelihood is called **confidence calibration**. For example, given 100 predictions, each with the confidence of 0.8, we expect that 80 should be correctly classified. 
+>
+> --- [Purvanshi Mehta](https://towardsdatascience.com/am-i-sure-or-unsure-talks-with-a-neural-network-fc0e14d31373)
+
+
+
